@@ -2,13 +2,17 @@
 
 Browser IDE kernel: file tree, tab lifecycle, command palette, terminal buffer with ANSI parsing.
 
-Part of the Counted fleet (planet-ide), generated from `seeds/seeds.yaml`.
+Part of the Counted fleet (planet-ide), stack class `frontend`, generated
+from `seeds/seeds.yaml`.
 
-## Architecture
+## Architecture (docs/REPO_STANDARD.md)
 
-- `src/modules.ts` — FileTree, TabManager, CommandPalette, AnsiTerminal
+- `src/lib/modules.ts` — module registry: FileTree, TabManager, CommandPalette, AnsiTerminal
+- `src/lib/rng.ts` — deterministic seeded PRNG (mulberry32)
 - `src/index.ts` — public API (`SPEC`, `MODULES`, Registry)
-- `src/rng.ts` — deterministic seeded PRNG (mulberry32)
+- `src/ui/` — frontend surfaces (reserved; this repo ships a headless kernel)
+- `assets/<kind>/` — media by kind (see assets policy READMEs)
+- `docs/STRUCTURE.md` — this repo's stack declaration + layout map
 - `tests/index.test.ts` — deterministic behavior suite
 
 ## Usage

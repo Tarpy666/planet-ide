@@ -2,6 +2,8 @@
   "name": "@counted/planet-ide",
   "version": "0.1.0",
   "description": "Browser IDE kernel: file tree, tab lifecycle, command palette, terminal buffer with ANSI parsing.",
+  "stack": "frontend",
+  "family": "counted",
   "type": "module",
   "main": "dist/index.js",
   "exports": {
